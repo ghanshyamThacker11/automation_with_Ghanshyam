@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.only('test', async ({ page }) => {
+test('test', async ({ page }) => {
   await page.goto('https://www.myntra.com/');
   await page.locator('#desktop-header-cnt').getByRole('link', { name: 'Men', exact: true }).hover();
   await page.getByRole('link', { name: 'Casual Trousers' }).click();
