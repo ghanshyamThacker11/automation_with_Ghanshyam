@@ -21,6 +21,6 @@ test.only('Date Picker', async ({ page }) => {
 
         console.log(date);
     }
-    page.locator("#ui-datepicker-div").getByRole('link', { name: '11', exact: true }).click();
-    await page.pause();
+    await page.locator("#ui-datepicker-div").getByRole('link', { name: '1', exact: true }).click();
+    // await page.pause();
 });
