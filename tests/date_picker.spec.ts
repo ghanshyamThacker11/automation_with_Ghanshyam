@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.only('Date Picker', async ({ page }) => {
+test('Date Picker', async ({ page }) => {
     await page.goto('https://gsrtc.in/site/');
     await page.getByRole('button', { name: 'Close' }).click();
     await page.getByRole('textbox', { name: 'Select Date' }).click();
