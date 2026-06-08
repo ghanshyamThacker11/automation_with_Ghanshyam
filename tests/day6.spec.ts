@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.skip('1. Assertions - Homepage', async ({ page }) => {
+test('1. Assertions - Homepage', async ({ page }) => {
     await page.goto('https://www.naaptol.com/');
 
     // Page-level assertions
