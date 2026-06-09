@@ -1,0 +1,17 @@
+[
+  {
+    "username": "mock_user10",
+    "email": "mock_user10@example.com",
+    "password": "Mock#445566"
+  },
+  {
+    "username": "automation03",
+    "email": "automation03@example.com",
+    "password": "Auto#5678"
+  },
+  {
+    "username": "beta_tester08",
+    "email": "beta_tester08@example.com",
+    "password": "Beta#67890"
+  }
+]
