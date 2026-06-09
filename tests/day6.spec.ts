@@ -9,7 +9,7 @@ test('1. Assertions - Homepage', async ({ page }) => {
 
     // Logo is visible
     const logos = page.locator('img[title="Online Shopping in India"]');
-    await expect(logos.nth(1)).toBeVisible();
+    await expect(logos.nth(1)).toBeVisible();   
 
 
     // "Log In / Register" link exists in header
@@ -41,7 +41,6 @@ test('1. Assertions - Homepage', async ({ page }) => {
     );
 });
 
-
 test('2. Soft Assertions - Homepage elements', async ({ page }) => {
     await page.goto('https://www.naaptol.com/');
 
@@ -53,7 +52,6 @@ test('2. Soft Assertions - Homepage elements', async ({ page }) => {
 
     await expect.soft(page.locator('footer, #copyright, [class*="footer"]').first()).toBeVisible();
 });
-
 
 test('3. Auto Waiting - Search navigation', async ({ page }) => {
     await page.goto('https://www.naaptol.com/');
@@ -97,8 +95,6 @@ test('4. Screenshots - Full page and element', async ({ page }) => {
 
     await expect(page).toHaveTitle(/Online Shopping India/);
 });
-
-
 
 test('5. Trace Viewer - Auto trace on retry (via config)', async ({ page }) => {
     await page.goto('https://www.naaptol.com/');
