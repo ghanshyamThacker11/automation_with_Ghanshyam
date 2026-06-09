@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
-import users from './data.json';
+//import users from home/ghanshyam.thacker@simform.dom/Downloads/automation_testing/data/data.json
+import users from '../data/data.json';
 
 test('Login using data from JSON', async ({ page }) => {
     for (const user of users) {
