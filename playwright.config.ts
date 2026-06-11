@@ -9,7 +9,7 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: 1 ,
   
   /* Test timeout (global) */
   timeout: 30000,
@@ -40,6 +40,7 @@ export default defineConfig({
     /* Individual timeouts */
     navigationTimeout: 30000,
     actionTimeout: 10000,
+    storageState: './data/storageState.json',
   },
 
   /* Configure projects for major browsers */
