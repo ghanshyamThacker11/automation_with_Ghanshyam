@@ -12,11 +12,7 @@ test('Login using data from JSON', async ({ page }) => {
     await expect(page.getByRole('link', { name: ' Logout' })).toBeVisible();
     // save context storage for later use
     await page.context().storageState({ path: './data/storageState.json' });
-    await page.pause();
 });
-// test.use({
-//   storageState: './data/storageState.json'
-// });
 test('Product flow', async ({ page }) => {
     await page.goto('https://www.automationexercise.com/');
     await page.getByText('Add to cart').nth(0).click();
