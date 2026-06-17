@@ -5,3 +5,9 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# BDD generated files
+reports/
+data/storageState.json
+screenshots/
+order-confirmation.png
