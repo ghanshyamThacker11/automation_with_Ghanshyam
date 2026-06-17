@@ -1,0 +1,240 @@
+[
+  {
+    "description": "  As a user\n  I want to login to the application\n  So that I can access my account",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-authentication;successful-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 281007264
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 90611156
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "tests/step-definitions/loginSteps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7591679541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I enter valid email and password",
+            "match": {
+              "location": "tests/step-definitions/loginSteps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 929923017
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click the login button",
+            "match": {
+              "location": "tests/step-definitions/loginSteps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 735194
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should be logged in successfully",
+            "match": {
+              "location": "tests/step-definitions/loginSteps.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130610645
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41209100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47408599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-authentication",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Authentication",
+    "tags": [],
+    "uri": "tests/features/login.feature"
+  },
+  {
+    "description": "  As a customer\n  I want to add products to cart and checkout\n  So that I can complete a purchase",
+    "elements": [
+      {
+        "description": "",
+        "id": "product-purchase-flow;complete-product-purchase-flow",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Complete product purchase flow",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 86401463
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 103922027
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the home page",
+            "match": {
+              "location": "tests/step-definitions/productSteps.ts:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5167798360
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I add a product to cart",
+            "match": {
+              "location": "tests/step-definitions/productSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 967003288
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I proceed to checkout",
+            "match": {
+              "location": "tests/step-definitions/productSteps.ts:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1383413381
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I fill in the payment details",
+            "match": {
+              "location": "tests/step-definitions/productSteps.ts:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88848404
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click pay and confirm order",
+            "match": {
+              "location": "tests/step-definitions/productSteps.ts:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1673936407
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see the order confirmation",
+            "match": {
+              "location": "tests/step-definitions/productSteps.ts:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25615974
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 60923525
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 29922944
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "product-purchase-flow",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Product Purchase Flow",
+    "tags": [],
+    "uri": "tests/features/product.feature"
+  }
+]

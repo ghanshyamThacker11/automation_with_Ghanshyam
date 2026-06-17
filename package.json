@@ -1,14 +1,26 @@
 {
   "name": "automation_testing",
   "version": "1.0.0",
+  "description": "Playwright POM + BDD Automation Framework",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "bdd": "cucumber-js --config cucumber.js",
+    "bdd:report": "node scripts/generate-bdd-report.js",
+    "bdd:run": "npm run bdd && npm run bdd:report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
+    "@cucumber/cucumber": "^10.0.0",
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.1",
+    "multiple-cucumber-html-reporter": "^3.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
   }
 }
