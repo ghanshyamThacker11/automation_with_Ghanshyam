@@ -1,0 +1,42 @@
+name: Slack Automation Test
+
+on:
+  push:
+    branches:
+      - slack-automation
+
+jobs:
+  playwright-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Test
+        run: npx playwright test tests/example.spec.ts
+
+      - name: Slack Success Notification
+        if: success()
+        run: |
+          curl -X POST -H "Content-type: application/json" \
+          --data "{\"text\":\"✅ Playwright Test Passed\nRepository: ${{ github.repository }}\nBranch: ${{ github.ref_name }}\"}" \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Slack Failure Notification
+        if: failure()
+        run: |
+          curl -X POST -H "Content-type: application/json" \
+          --data "{\"text\":\"❌ Playwright Test Failed\nRepository: ${{ github.repository }}\nBranch: ${{ github.ref_name }}\"}" \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
