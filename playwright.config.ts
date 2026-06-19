@@ -12,6 +12,7 @@ export default defineConfig({
 
   use: {
     headless: true,
+    trace: 'on',
     viewport: {
       width: 1280,
       height: 720
