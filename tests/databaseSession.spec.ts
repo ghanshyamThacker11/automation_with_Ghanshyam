@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { connection } from '../db/dbConnection';
+import fs from 'fs';
 
 test('data-driven Playwright framework using MySQL', async ({ page }) => {
 
@@ -28,6 +29,21 @@ test('data-driven Playwright framework using MySQL', async ({ page }) => {
     expect(paymentRows.length).toBeGreaterThan(0);
 
     const payment = paymentRows[0];
+
+    fs.writeFileSync(
+        'db-data.json',
+        JSON.stringify(
+            {
+                users: userRows.map((u: any) => ({
+                    id: u.id,
+                    email: u.email
+                })),
+                payments: paymentRows
+            },
+            null,
+            2
+        )
+    );
 
     await page.getByText('Add to cart').nth(0).click();
     await page.getByRole('button', { name: 'Continue Shopping' }).click();
