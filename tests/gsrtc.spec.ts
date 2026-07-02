@@ -9,7 +9,7 @@ test('Date Picker', async ({ page }) => {
     let month = await page.locator('.ui-datepicker-month').textContent();
     let year = await page.locator('.ui-datepicker-year').textContent();
     let date = (month?.trim() ?? '') + (year?.trim() ?? '');
-    while (date !== "July2026") {
+    while (date !== "August2026") {
         await page.locator('a[title="Next"]').click();
 
         month = await page.locator('.ui-datepicker-month').textContent();
@@ -17,5 +17,5 @@ test('Date Picker', async ({ page }) => {
 
         date = (month?.trim() ?? '') + (year?.trim() ?? '');
     }
-    await page.locator("#ui-datepicker-div").getByRole('link', { name: '1', exact: true }).click();
+    await page.locator("#ui-datepicker-div").getByRole('link', { name: '4', exact: true }).click();
 });
